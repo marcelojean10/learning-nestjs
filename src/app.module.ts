@@ -13,7 +13,10 @@ import { GraphQLModule } from '@nestjs/graphql';
       synchronize: true,
     }),
     GraphQLModule.forRoot({
-      autoSchemaFile: 'schema.gql',
+      autoSchemaFile: 'src/schema.gql',
+      debug: true,
+      playground: true,
+      disableHealthCheck: true,
     }),
     UsersModule,
   ],
